@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# RESOLUTION DE L'ECRAN
+xrandr --output DP-0 --mode 3440x1440 --rate 100 &
+
+# SXHKD
+sxhkd &
+
+# DEFINITION DES BUREAUX
+bspc monitor -d " [ 4C +37.11 ] " " [ SDSS J0100+2802 ] " " [ NGC 5033 ] " " [ 1ES 2344+514 ] " " [ APM 08279+5255 ] " " [ SN 1006 ] "
+
+# FOND D'ECRAN
+feh --bg-fill /home/lazarobradovic/Images/space-wallpaper.jpg &
+
+# POLYBAR
+~/.config/polybar/launch.sh &
+
+# DISPOSITION CLAVIER
+setxkbmap -layout ch -variant fr
+
+# PICOM
+picom --config ~/.config/picom/picom.conf &
+
+# XSETTINGS
+xsettingsd &
+
+# LANCER CONKY APRÈS UN COURT DÉLAI POUR ÉVITER LES CONFLITS DE DÉMARRAGE
+(sleep 1 && conky -c ~/.config/conky/system-left.lua && conky -c ~/.config/conky/music-right.lua) &
+
+# DÉSACTIVER LA VEILLE D'ÉCRAN
+xset s off
+xset s noblank
+xset dpms 0 0 0
+
+
+# KDRIVE
+pgrep -f "kDrive.AppImage" > /dev/null || ~/Applications/kDrive.AppImage &
+
+#~/.config/scarlett-init.sh &
+
+# RÉGLAGES GPU NVIDIA
+#~/.config/bspwm/nvidia.sh &

@@ -1,0 +1,104 @@
+# Terminal
+super + Return
+    alacritty
+
+# Menu d'application (rofi)
+super + space
+    rofi -show combi
+
+# Fermer une fenêtre
+super + w
+    bspc node -c
+
+# cacher / montrer la fenêtre courante
+super + m
+    bspc node -g hidden
+
+# dé-cacher et focus la prochaine fenêtre cachée du bureau courant
+super + shift + m
+    id="$(bspc query -N -n '.hidden.local' | head -n1)"; [ -n "$id" ] && bspc node "$id" -g hidden=off -f
+
+# dé-cacher toutes les fenêtres cachées
+super + ctrl + m
+    bspc query -N -n .hidden | xargs -r -I{} bspc node {} -g hidden=off
+
+
+# Redémarrer bspwm
+super + shift + r
+    bspc wm -r
+
+# Redémarrer sxhkd
+super + shift + s
+    pkill -USR1 -x sxhkd
+
+# Quitter la session
+super + alt + q
+    pkill -KILL -u $USER
+
+# Changer de bureau
+super + {1-6}
+    bspc desktop -f ^{1-6}
+
+# Déplacer une fenêtre vers un autre bureau
+super + shift + {1-6}
+    bspc node -d ^{1-6}
+
+# Basculer entre les fenêtres
+super + {Left,Down,Up,Right}
+    bspc node -f {west,south,north,east}
+
+
+# Déplacer les fenêtres
+super + shift + {Left,Down,Up,Right}
+    bspc node -s {west,south,north,east}
+
+# Fullscreen
+super + f
+    bspc node -t ~fullscreen
+
+# Ouvrir les paramètres Bluetooth
+super + shift + b
+    blueman-manager
+
+# Ouvrir brave
+super + b
+    brave-browser
+
+# Touches fonction
+XF86MonBrightnessDown
+  brightnessctl set 5%-
+
+XF86MonBrightnessUp
+  brightnessctl set +5%
+
+XF86AudioPlay
+    playerctl play-pause
+
+XF86AudioRaiseVolume
+  ~/.config/scripts/vol-up.sh
+
+XF86AudioLowerVolume
+  ~/.config/scripts/vol-down.sh
+
+XF86AudioMute
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Alt + Tab : fenêtre suivante
+alt + Tab
+    bspc node -f next.local
+
+# Alt + Shift + Tab : fenêtre précédente
+alt + shift + Tab
+    bspc node -f prev.local
+
+# Super + Tab : bureau suivant
+super + Tab
+    bspc desktop -f next.local
+
+# Super + Shift + Tab : bureau précédent
+super + shift + Tab
+    bspc desktop -f prev.local
+
+
+
+
