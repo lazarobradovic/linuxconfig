@@ -4,7 +4,8 @@ Configuration personnelle pour bspwm, sxhkd, polybar, conky et autres composants
 
 ## Composants
 
-- **bspwm** : Gestionnaire de fenêtres
-- **sxhkd** : Raccourcis clavier
-- **polybar** : Barre de statut
-- **conky** : Widgets système
+- **bspwm** : Windows tiling manager
+- **sxhkd** : Shortcuts
+- **polybar** : Status bar
+- **conky** : Widgets for the desktop
+- **gtk** : GTK theme matching the wallpaper
