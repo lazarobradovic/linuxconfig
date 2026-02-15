@@ -1,0 +1,35 @@
+# Themix - oomox-space-wallpaper
+[colors.primary]
+background = "#000000"
+foreground = "#ffffff"
+
+[colors.cursor]
+text = "#000000"
+cursor = "#ffffff"
+
+[colors.normal]
+black   = "#000000"
+red     = "#853c61"
+green   = "#374b89"
+yellow  = "#e99d99"
+blue    = "#586bb0"
+magenta = "#b964a1"
+cyan    = "#82b2e0"
+white   = "#ffffff"
+
+[colors.bright]
+black   = "#7f7f7f"
+red     = "#d87e85"
+green   = "#000000"
+yellow  = "#835783"
+blue    = "#141414"
+magenta = "#f5e5de"
+cyan    = "#9a495f"
+white   = "#ffffff"
+
+[colors.selection]
+text = "#000000"
+background = "#835783"
+
+[colors]
+draw_bold_text_with_bright_colors = false
