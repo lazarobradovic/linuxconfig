@@ -1,0 +1,44 @@
+* {
+  font: "FiraCode Nerd Font 10";
+  background-color: #00030a;
+  text-color: #ffffff;
+}
+
+window {
+  background-color: #00030a;
+  border: 1px;
+  border-color: #6c3964;
+  border-radius: 5px;
+  padding: 10px;
+  width: 20%;
+  height: 20%;
+  title: "";
+}
+
+mainbox, listview, entry {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+element {
+  background-color: #00030a;
+  text-color: inherit;
+  padding: 2px 2px;
+}
+
+element selected {
+  background-color: #6c3964;
+  text-color: #FFFFFF;
+}
+
+element-text, element-icon {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+element-text selected, element-icon selected {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+

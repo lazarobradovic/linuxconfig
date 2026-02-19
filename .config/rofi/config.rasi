@@ -1,0 +1,11 @@
+configuration {
+  modi: "drun,run,window";
+  show-icons: false;
+  combi-modes: "drun,recoll";
+  display-drun: "";
+  display-combi: "››› ";
+}
+
+@theme "~/.config/rofi/theme.rasi"
+
+

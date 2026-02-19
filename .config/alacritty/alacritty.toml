@@ -1,5 +1,3 @@
-# Import des couleurs
-import = ["~/.config/alacritty/themix-colors.toml"]
 
 [window]
 padding = { x = 5, y = 5 }
@@ -7,9 +5,13 @@ decorations = "none"
 dynamic_padding = false
 
 [font]
-normal = { family = "Monospace", style = "Regular" }
-size = 10.0
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
+size = 12.0
 
 [cursor]
 style = "Block"
 unfocused_hollow = true
+
+[general]
+# Import des couleurs
+import = ["/home/lazarobradovic/.config/alacritty/themix-colors.toml"]
