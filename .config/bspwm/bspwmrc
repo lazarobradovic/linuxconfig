@@ -10,7 +10,7 @@ sxhkd &
 bspc monitor -d " [ 4C +37.11 ] " " [ SDSS J0100+2802 ] " " [ NGC 5033 ] " " [ 1ES 2344+514 ] " " [ APM 08279+5255 ] " " [ SN 1006 ] "
 
 # FOND D'ECRAN
-feh --bg-fill /home/lazarobradovic/Images/space-wallpaper.jpg &
+feh --bg-fill /home/lazarobradovic/Documents/Images/space-wallpaper.jpg &
 
 # POLYBAR
 ~/.config/polybar/launch.sh &
@@ -19,7 +19,7 @@ feh --bg-fill /home/lazarobradovic/Images/space-wallpaper.jpg &
 setxkbmap -layout ch -variant fr
 
 # PICOM
-picom --config ~/.config/picom/picom.conf &
+picom --config /home/lazarobradovic/.config/picom/picom.conf &
 
 # XSETTINGS
 xsettingsd &

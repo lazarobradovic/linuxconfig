@@ -7,7 +7,7 @@ conky.config = {
     gap_y = 70,
     minimum_width = 460,
     maximum_width = 460,
-    minimum_height = 1330,
+    minimum_height = 1150,
     font = 'FiraCode Nerd Font:size=10',
     default_color = '#fff',
     draw_borders = true,
@@ -84,5 +84,3 @@ IP        ${alignr 200}${addr enx6c70cbb36bc7}
 UPLOAD    ${alignr 0}${downspeed enx6c70cbb36bc7} ${downspeedgraph enx6c70cbb36bc7 8,200 f49d53 1d2733}
 DOWNLOAD  ${alignr 0}${upspeed enx6c70cbb36bc7} ${upspeedgraph enx6c70cbb36bc7 8,200 f49d53 1d2733}
 ]];
-
-

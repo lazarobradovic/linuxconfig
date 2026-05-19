@@ -32,4 +32,3 @@ ${color #89CFF0}${font Monospace:bold:size=10}[ NOW PLAYING ]${font}${color}
 ▶ ${exec playerctl metadata xesam:title}
 ⏱ ${exec playerctl metadata mpris:length | awk '{print int($1/1000000) " sec"}'}
 ]];
-

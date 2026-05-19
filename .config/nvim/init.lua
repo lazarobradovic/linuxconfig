@@ -281,3 +281,5 @@ vim.keymap.set('n', '<C-h>', ':%s/', { desc = 'Search and replace' })
 -- print("💡 Appuie sur <Espace>e pour ouvrir l'explorateur de fichiers")
 -- print("💡 Appuie sur <Espace>ff pour rechercher un fichier")
 -- print("💡 L'autocomplétion fonctionne automatiquement!")
+
+vim.cmd.colorscheme("waybar-custom")
